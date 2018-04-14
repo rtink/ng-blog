@@ -1,0 +1,40 @@
+<main>
+  <section>
+    <form 
+    [formGroup]="signInForm" (ngSubmit)="signIn()">
+      <h3>Welcome back!</h3>
+      <p>Login to your account</p>
+
+      <mat-form-field [formGroup]="signInForm">
+        <input matInput placeholder="Enter your email" [formControl]="email" required>
+        <mat-error *ngIf="!email.valid">Invalid or missing email</mat-error>
+      </mat-form-field>
+
+      <mat-form-field [formGroup]="signInForm">
+        <input 
+          matInput 
+          placeholder="Enter a password" 
+          [type]="hide ? 'password' : 'text'"
+          [formControl]="password" 
+          required>
+        <mat-icon matSuffix (click)="hide = !hide"
+        >{{ hide ? 'visibility' : 'visibility_off' }}
+      </mat-icon>
+        <mat-hint align="end">
+          <a routerLink="/reset-password">Forgot password?</a>
+        </mat-hint>
+        <mat-error *ngIf="!password.valid">Invalid or missing password</mat-error>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit" color="accent">Sign In</button>
+
+      <p>Tired of yet another password? Continue with:</p>
+      
+      <button mat-raised-button (click)="auth.googleLogin()">Google</button>
+      <button mat-raised-button (click)="auth.twitterLogin()">Twitter</button>
+      <button mat-raised-button (click)="auth.githubLogin()">Github</button>
+      <button mat-raised-button (click)="auth.facebookLogin()">Facebook</button>
+
+    </form>
+  </section>
+</main>
