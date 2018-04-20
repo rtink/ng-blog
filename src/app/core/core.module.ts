@@ -7,6 +7,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth/';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthModule } from '../auth/auth.module';
 import { AuthService } from './auth.service';
+import { UserModule } from '../user/user.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { AuthService } from './auth.service';
     AuthModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    UserModule
   ],
   declarations: [],
   providers: [AuthService]
