@@ -10,7 +10,7 @@ export const environment = {
     authDomain: "ng-blog-rhonda.firebaseapp.com",
     databaseURL: "https://ng-blog-rhonda.firebaseio.com",
     projectId: "ng-blog-rhonda",
-    storageBucket: "",
+    storageBucket: "gs://ng-blog-rhonda.appspot.com/",
     messagingSenderId: "536979259418"
   }
 };

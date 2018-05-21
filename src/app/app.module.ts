@@ -12,6 +12,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module'
 
 import { RoutingModule } from './/routing.module';
+import { PostModule } from './post/post.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { RoutingModule } from './/routing.module';
     MaterialModule,
     CoreModule,
     SharedModule,
-    RoutingModule
+    RoutingModule,
+    PostModule
   ],
   providers: [],
   bootstrap: [AppComponent]
